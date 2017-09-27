@@ -11,17 +11,17 @@ describe("Thermostat", function () {
       expect(myThermostat.getTemp()).toEqual(DEFAULT_TEMP);
     });
   });
-  describe("increaseTemp", function () {
-    it("increase temperature by 4", function () {
-      myThermostat.increaseTemp(4);
-      expect(myThermostat.getTemp()).toEqual(24);
+  describe("raiseTemp", function () {
+    it("increase temperature by 1", function () {
+      myThermostat.raiseTemp();
+      expect(myThermostat.getTemp()).toEqual(DEFAULT_TEMP + 1);
     });
   });
-  describe("decreaseTemp", function () {
-    it("decrease temperature by 4", function () {
+  describe("lowerTemp", function () {
+    it("reduce temperature by 1", function () {
 
-      myThermostat.decreaseTemp(4);
-      expect(myThermostat.getTemp()).toEqual(16);
+      myThermostat.lowerTemp();
+      expect(myThermostat.getTemp()).toEqual(DEFAULT_TEMP - 1);
     });
   });
   describe("getPowerStatus", function () {

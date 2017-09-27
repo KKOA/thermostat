@@ -3,23 +3,23 @@ const DEFAULT_TEMP = 20;
 
 function Thermostat() {
   this.temp = DEFAULT_TEMP;
-  this.powerStatus = 'on'
+  this.psm = 'on'
 }
 
-Thermostat.prototype.getTemp = function(number) {
+Thermostat.prototype.getTemp = function() {
   return this.temp;
 }
 
-Thermostat.prototype.increaseTemp = function(increase) {
-  this.temp +=  increase;
+Thermostat.prototype.raiseTemp = function() {
+  this.temp +=  1;
 }
 
-Thermostat.prototype.decreaseTemp = function(decrease) {
-  this.temp -= decrease;
+Thermostat.prototype.lowerTemp = function() {
+  this.temp -= 1;
 }
 
 Thermostat.prototype.getPowerStatus = function() {
-  return this.powerStatus;
+  return this.psm;
 }
 
 Thermostat.prototype.resetTemp = function(number) {
